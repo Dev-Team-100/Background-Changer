@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 i=0
 echo "Do you want to add to the exsiting loop? [Y/n]"
@@ -28,11 +28,12 @@ echo $ARRAY >> Bg.txt
 cd
 fi
 
+echo "If you want to stop at any time use [CTRL+S]"
 while :
 do
-echo "If you want to stop at any time use [CTRL+D]"
 for a in $ARRAY
 do
+wait 5
 gsettings set org.gnome.desktop.background picture-uri "$ARRAY"
 done
 done
